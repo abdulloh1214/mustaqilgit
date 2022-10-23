@@ -1,0 +1,24 @@
+{
+  "name": "git-mustaqil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulloh1214/mustaqilgit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulloh1214/mustaqilgit/issues"
+  },
+  "homepage": "https://github.com/abdulloh1214/mustaqilgit#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7"
+  }
+}
