@@ -50,8 +50,19 @@ router.delete("/api/movies/:id", (req, res)=>{
 
 router.get("/api/movies/top10", (req, res)=>{
     const score = movieDb.find({}).sort({imdb_score: -1}).limit(10)
-    res.send(score)
+    score.then(data=>{
+        res.send(data)
+    }).catch(err=>{
+        console.log(err);
+    })
 })
-
-
+router.get("/api/movies/between/:start/:end", (req, res)=>{
+    let{start, end}=req.params
+    const promise = movieDb.find({year: {"$gte": (start), "$lte": (end)}})
+    promise.then(data=>{
+        res.send(data)
+    }).catch(err=>{
+        console.log(err)
+    })
+})
 module.exports = router
